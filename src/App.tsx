@@ -1,35 +1,25 @@
-import './App.css';
+import { style, textAlign } from "@mui/system";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  useHref
 } from "react-router-dom";
-import About from './About';
-import Home from './Home';
-import External from './External';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <div className="menu">
-          <Link to="/">Home</Link>  
-          <Link to="/about">About</Link> 
-          <Link to="/external">External</Link>
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className='body' >
+        <a  href={"https://github.com/utkuKutkut/profile-page"}> Home </a>
+        <h1>Profile Page </h1>
         </div>
-        <Routes>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/external">
-            <External />
-          </Route>
-        </Routes>
-      </div>
+        <div className='App' >
+        <h1>Utku Can Kutkut </h1>
+        <h4>github/utkuKutkut </h4>
+        </div>
+    
     </Router>
   );
 }
