@@ -1,7 +1,7 @@
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -18,8 +18,8 @@ function App() {
           <Link to="/about">About</Link> 
           <Link to="/external">External</Link>
         </div>
-        <Switch>
-          <Route exact path="/">
+        <Routes>
+          <Route path="/">
             <Home />
           </Route>
           <Route path="/about">
@@ -28,7 +28,7 @@ function App() {
           <Route path="/external">
             <External />
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
